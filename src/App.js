@@ -5,12 +5,12 @@ import Alert from "./component/Alert";
 import Github from "./component/Github"
 
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
+// import {
+//   BrowserRouter,
+//   Routes,
+//   Route,
   
-} from "react-router-dom";
+// } from "react-router-dom";
 
 import { useState } from "react";
 
@@ -40,19 +40,14 @@ function App(){
   return(
     <>
 
-<BrowserRouter>
+    <div>
 
     <Navbar  aboutUsTitle="about me" tittle="Info" hometittle="Homepage" tittles="github" mode={mode} handleMode={handleMode}/>
     <Alert alert={alert}/>
-   
-
-<Routes>
-    <Route path='/' element={<Form showAlert ={showAlert} mode={mode} uperCaseBttn="upgrade to Uppercase"/>} />
-    <Route path='About us'element={< Aboutus mode={mode}/>} />
-    <Route path='Github' element={< Github />} />
-
- </Routes>
-    </BrowserRouter>
+    <Form showAlert ={showAlert} mode={mode} uperCaseBttn="upgrade to Uppercase"/>
+    <Aboutus mode={mode}/>
+    <Github />
+    </div>
 
   </>
   );
